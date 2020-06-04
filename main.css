@@ -14,6 +14,7 @@ body{
   height: 100vh;
   background: url('images/sitebg3.jpg') no-repeat center fixed;
   background-size: cover;
+  /* overflow-x: hidden; */
 }
 
 a{
@@ -31,7 +32,7 @@ p{
 }
 .portfolio img {
   display: block;
-  max-height: 180px;
+  max-height: 160px;
   padding: 0 2em;
   margin: auto;
 }
@@ -43,7 +44,7 @@ header{
 
 /* header */
 .header{
-  width: 100vw;
+  width: 100%;
   height: 20vh;
   background: transparent;
   transition: all 0.4s ease-in-out;
@@ -181,7 +182,7 @@ header{
   align-items: center;
   justify-content: center;
   font-size: 10em;
-  width: 100vw;
+  width: 100%;
 }
 
 .hello-world{
@@ -249,7 +250,7 @@ h2:after{
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-row-gap: 4em;
-  width: 100vw;
+  width: 100%;
   margin-bottom: 8em;
 }
 
@@ -264,7 +265,7 @@ h2:after{
    "img details"
    "img buttons";
    padding: 2rem 1.5rem;
-   margin: 2rem 6rem;
+   margin: 1rem 4rem;
    border-radius: 15px;
    /* transition: 1.5s ease; */
    box-sizing: border-box;
@@ -282,7 +283,7 @@ h2:after{
    "details img"
    "buttons img";
    padding: 2rem 1.5rem;
-   margin: 2rem 6rem;
+   margin: 1rem 4rem;
    border-radius: 15px;
    /* transition: 1.5s ease; */
    box-sizing: border-box;
@@ -311,8 +312,12 @@ h2:after{
 /* details */
 .portfolio-description{
   grid-area: details;
-
 }
+
+.portfolio-description p{
+  font-size: 1.7em;
+}
+
 .portfolio-item.rs .portfolio-description{
   padding-left: 1.2em;
   padding-right: 1.2em;
@@ -327,7 +332,7 @@ h2:after{
   justify-content: space-evenly;
 }
 
-.button-container button{
+.button-container a{
   outline: none;
   font-size: 1.5em;
   border-radius: 15px;
@@ -353,7 +358,7 @@ h2:after{
 }
 
 .demo:hover{
-  background-color: rgba(50, 93, 123, 0.8);
+  background-color: rgba(30, 93, 138, 0.8);
   color: white
 }
 
@@ -370,7 +375,7 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 50vw;
+  max-width: 50%;
   position: relative;
   margin: auto;
 }
@@ -473,7 +478,7 @@ img {vertical-align: middle;}
 .contact-container{
   position: relative;
   height: 60vh;
-  margin-bottom: 5em;
+  margin-bottom: 20em;
   margin-top: -10em;
 }
 
@@ -530,8 +535,49 @@ img {vertical-align: middle;}
 }
 
 .submit:hover{
-  background: rgba(50, 93, 123, 0.8);
+  background: rgba(30, 93, 138, 0.8);
   color: white;
 }
 
 
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 5em 0;
+  background: rgb(95, 139, 205);
+}
+
+.copyright-container a{
+  color: black;
+  font-size: 1.6em;
+}
+
+.privacy-policy {
+  display:inline-block;
+  text-align:center;
+  color: rgb(182, 207, 250) !important;
+}
+.privacy-policy:hover {
+  font-weight:bold;
+  color: rgb(1, 47, 147) !important;
+}
+.privacy-policy::before {
+  display: block;
+  content: attr(name);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+@media (max-width: 1024px) {
+  .portfolio-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 4em;
+    width: 100%;
+    margin-bottom: 8em;
+  }
+}

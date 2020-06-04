@@ -47,14 +47,15 @@
           </div>
           <h1>Meme-A-Friend</h1>
           <div class="portfolio-description">
-            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is a simple full stack app. It is similar to a grocery check list, and allows you 
-              to add, remove, and cross off tasks. Made with React, Bootstrap, and Firebase as a 
-              real-time database.
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Memes are meant to be shared with friends. 
+              This app uses Imgur's API along with Twilio's communication services to send memes via text.
+                The server is deployed with Heroku and client side is deployed with surge. 
+              A fully mobile responsive app using CSS grid.
             </p>
           </div>
           <div class="button-container">
-            <button class="demo">&gt;Demo</button>
-            <button class="github">Github</button>
+            <a href="http://a-meme-a-friend.surge.sh/" class="demo" target="_blank">&gt;Demo</a>
+            <a href="https://github.com/Fatpikachu/meme-a-friend" class="github" target="_blank">Github</a>
           </div>
         </div>
         <div class="portfolio-item rs" data-aos='fade-left' data-aos-delay='500'>
@@ -63,13 +64,14 @@
             </div>
             <h1>TP/Egg Calculator</h1>
               <div class="portfolio-description">
-                  <p>some random dfkjdksjfkajdfljasdlkfj
-                     text about this asjdfklasdjf s dflkajd flaksdj f dslafkj
+                  <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Admist the current pandemic many necessities are scarce, and 
+                    keeping track of supplies can be bothersome. This helps calculate how long your supply will last
+                    taking various factors into account.
                   </p>
               </div>
               <div class="button-container">
-                  <button class="demo">&gt;Demo</button>
-                  <button class="github">Github</button>
+                  <a href="http://tp_egg_calc.surge.sh/" class="demo" target="_blank">&gt;Demo</a>
+                  <a href="https://github.com/Fatpikachu/ToiletpaperAndEggs" class="github" target="_blank">Github</a>
                 </div>
           </div>
           <div class="portfolio-item ls" data-aos='fade-left' data-aos-delay='500'>
@@ -84,30 +86,31 @@
                 <img src="images/CheckList.png" alt="">
               </div>
               <div class="button-container">
-                  <button class="demo">&gt;Demo</button>
-                  <button class="github">Github</button>
+                  <a href="http://a-check-off-list.surge.sh" class="demo" target="_blank">&gt;Demo</a>
+                  <a href="https://github.com/Fatpikachu/check-list" class="github" target="_blank">Github</a>
                 </div>
             </div>
             <div class="portfolio-item rs" data-aos='fade-right' data-aos-delay='500'>
                 <h1>Multi Unit Converter</h1>
               <div class="portfolio-description">
-                  <p>A unit conversion for lengths, liquids, weights, and temperature. Conveniently displays all converted units at once.
-                      The app is heavily built upon algorithms for organized and concise coding.
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A unit conversion for lengths, liquids, weights, and temperature. 
+                      Conveniently displays all converted units at once.
+                      The app is heavily built upon algorithms for performance and oragnized code.
                   </p>
               </div>
               <div class="portfolio-img">
                 <img src="images/UnitConverter.png" alt="">
               </div>
               <div class="button-container">
-                  <button class="demo">&gt;Demo</button>
-                  <button class="github">Github</button>
+                  <a href="http://a-unit-converter.surge.sh/" class="demo" target="_blank">&gt;Demo</a>
+                  <a href="https://github.com/Fatpikachu/unitKonverter" class="github" target="_blank">Github</a>
                 </div>
             </div>
             <div class="portfolio-item ls" data-aos='fade-right' data-aos-delay='500'>
               <h1>Choose Your Element</h1>
               <div class="portfolio-description">
-                  <p>Gaming is one of my favorite hobbies. I emulated the 'rock, paper, scissors' using a basic elemental correlation
-                    (grass, water, fire).
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gaming is one of my favorite hobbies, so I emulated the 'rock, 
+                    paper, scissors' following the most basic elemental correlation (grass, water, fire).
                       It is made with React and Bootstrap.
                   </p>
                 </div>
@@ -115,16 +118,16 @@
                 <img src="images/ChooseElement.png" alt="">
               </div>
               <div class="button-container">
-                  <button class="demo">&gt;Demo</button>
-                  <button class="github">Github</button>
+                  <a href="http://a-choose-element.surge.sh/" class="demo" target="_blank">&gt;Demo</a>
+                  <a href="https://github.com/Fatpikachu/choose-your-element" class="github" target="_blank">Github</a>
                 </div>
             </div>
             <div class="portfolio-item rs" data-aos='fade-left' data-aos-delay='500'>
                 <h1>Connect 4</h1>
               <div class="portfolio-description">
-                  <p>My version of the boardgame Connect Four. 
-                    A game played between two players connecting 
-                    four pieces in a row dropped into a checkerboard to win. 
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My version of the boardgame Connect Four. 
+                    A game competing between two players to connect 
+                    four pieces in a row dropped into a checkerboard. 
                     Another React app with custom CSS styling.
                   </p>
                 </div>
@@ -132,8 +135,8 @@
                 <img src="images/Connect4.png" alt="">
               </div>
               <div class="button-container">
-                  <button class="demo">&gt;Demo</button>
-                  <button class="github">Github</button>
+                  <a href="http://a-connect4.surge.sh/" class="demo" target="_blank">&gt;Demo</a>
+                  <a href="https://github.com/Fatpikachu/connectFour" class="github" target="_blank">Github</a>
               </div>
             </div>
         </div>
@@ -243,6 +246,10 @@
                 <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
               </div>
               <div class='wrap'>
+                  <label for="subject">Subject:</label>
+                  <input type="text" id="subject" name="subject" placeholder="Enter Subject">
+                </div>
+              <div class='wrap'>
                 <label for="subject">Message:</label>
                 <textarea name="message" id="message" rows="5"></textarea>
               </div>
@@ -253,10 +260,12 @@
     </section>
 
     <footer class="copyright">
-      <div class="up" id="up">
-        <i class="fas fa-chevron-up"></i>
-        <p>&copy;
-           2020 jeffrey leung</p>
+      <div class='copyright-container'>
+            <a>&copy; 2020 JeffreyLeung.</a>
+            <a class='privacy-policy'href='https://www.privacypolicies.com/privacy/view/844b623acee015748cc7a0703be387f4'
+            target="_blank" name='Privacy Policy'>Privacy Policy</a>  
+            <a>All rights reserved.</a>
+          </div>
       </div>
     </footer>
 
