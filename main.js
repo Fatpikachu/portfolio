@@ -1,10 +1,3 @@
-// $(document).ready(function (){
-//   $('.menu-toggler').on('click', function(){
-//     $(this).toggleClass('open');
-//     $('.top-nav').toggleClass('open');
-//   })
-// })
-
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -47,11 +40,6 @@ $(document).on("scroll", function(){
   {
     $(".header").removeClass("shrink");
   }
-
-  // AOS.init({
-  //   easing: 'ease',
-  //   duration: 2000
-  // })
 });
 
 $(document).ready(function (){
@@ -62,7 +50,6 @@ $(document).ready(function (){
     var email = $('#email').val();
     var name = $('#name').val();
     var message = $('#message').val();
-
     //validation
   })
 })
