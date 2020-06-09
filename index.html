@@ -1,47 +1,58 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Dosis">
 </head>
 <body>
-    <header>  
-        <div class="header">
-          <h1>Jeffrey Leung</h1>
-          <h6>----- Software Engineer -----</h6>
-          <div id="menu-bar">
-              <div id="menu" onclick="onClickMenu()">
-                <div id="bar1" class="bar"></div>
-                <div id="bar2" class="bar"></div>
-                <div id="bar3" class="bar"></div>
-              </div>
-              <ul class="nav" id="nav">
-                <li><a href="#about">Home</a></li>
-                <li><a href="#portfolio">Projects</a></li>
-                <li><a href="#full-apps">Apps</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
+  <div class='app-container'>
+        <div class="header" id='header'>
+          <div class='left-corner'>
+            <h1>Jeffrey Leung</h1>
+            <h6>Software Engineer</h6>
           </div>
-          <div class="menu-bg" id="menu-bg"></div>
+          <div id="menu-container">
+            <div id="menu-bar">
+                <div id="menu" onclick="onClickMenu()">
+                  <div id="bar1" class="bar"></div>
+                  <div id="bar2" class="bar"></div>
+                  <div id="bar3" class="bar"></div>
+                </div>
+                <ul class="nav" id="nav">
+                  <li><a href="#about">Home</a></li>
+                  <li><a href="#portfolio">Projects</a></li>
+                  <li><a href="#full-apps">Apps</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="menu-bg" id="menu-bg"></div>
+          </div>
         </div>
-    </header>
 
-    <section class="about" id="about">
+
+    <div class="about" id="about">
       <div class="container">
         <div class='hello-world'>Hello World</div>
         <button class='resume-download'> Download Resume</button>
       </div>
-    </section>
+    </div>
 
-    <section class="portfolio" id="portfolio">
+    <div class="portfolio" id="portfolio">
         <div class='section-header'>
           <h2>Projects</h2>
         </div>
       <div class="portfolio-container">
-        <div class="portfolio-item ls" data-aos='fade-right' data-aos-delay='500'>
+        <div class="portfolio-item ls" >
           <div class="portfolio-img">
             <img src="images/memeAfriend.png" alt="">
           </div>
@@ -58,7 +69,7 @@
             <a href="https://github.com/Fatpikachu/meme-a-friend" class="github" target="_blank">Github</a>
           </div>
         </div>
-        <div class="portfolio-item rs" data-aos='fade-left' data-aos-delay='500'>
+        <div class="portfolio-item rs" >
             <div class="portfolio-img">
               <img src="images/tpEgg.png" alt="">
             </div>
@@ -74,7 +85,7 @@
                   <a href="https://github.com/Fatpikachu/ToiletpaperAndEggs" class="github" target="_blank">Github</a>
                 </div>
           </div>
-          <div class="portfolio-item ls" data-aos='fade-left' data-aos-delay='500'>
+          <div class="portfolio-item ls" >
               <h1>Check List</h1>
               <div class="portfolio-description">
                   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is a simple full stack app. It is similar to a grocery check list, and allows you 
@@ -90,7 +101,7 @@
                   <a href="https://github.com/Fatpikachu/check-list" class="github" target="_blank">Github</a>
                 </div>
             </div>
-            <div class="portfolio-item rs" data-aos='fade-right' data-aos-delay='500'>
+            <div class="portfolio-item rs" >
                 <h1>Multi Unit Converter</h1>
               <div class="portfolio-description">
                   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A unit conversion for lengths, liquids, weights, and temperature. 
@@ -106,7 +117,7 @@
                   <a href="https://github.com/Fatpikachu/unitKonverter" class="github" target="_blank">Github</a>
                 </div>
             </div>
-            <div class="portfolio-item ls" data-aos='fade-right' data-aos-delay='500'>
+            <div class="portfolio-item ls" >
               <h1>Choose Your Element</h1>
               <div class="portfolio-description">
                   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gaming is one of my favorite hobbies, so I emulated the 'rock, 
@@ -122,7 +133,7 @@
                   <a href="https://github.com/Fatpikachu/choose-your-element" class="github" target="_blank">Github</a>
                 </div>
             </div>
-            <div class="portfolio-item rs" data-aos='fade-left' data-aos-delay='500'>
+            <div class="portfolio-item rs" >
                 <h1>Connect 4</h1>
               <div class="portfolio-description">
                   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My version of the boardgame Connect Four. 
@@ -140,11 +151,11 @@
               </div>
             </div>
         </div>
-    </section>
+      </div>
 
-    <section className="full-apps" id="full-apps">
+    <div className="full-apps" id="full-apps">
         <div class='section-header'>
-            <h2>Full Stack Apps</h2>
+            <h2>Full Stack</h2>
         </div>
       <div class="slideshow-container">
         <div class="mySlides fade">
@@ -228,49 +239,87 @@
           <span class="dot" onclick="currentSlide(7)"></span> 
           <span class="dot" onclick="currentSlide(8)"></span> 
         </div>
-      </section>
+
+        <div class='skills-container'>
+          <ul class='skills'>
+              <li>Javascript</li>
+              <li>ES6</li>
+              <li>React</li>
+              <li>Redux</li>
+              <li>HTML/CSS</li>
+              <li>jQuery</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>SQL/MySQL</li>
+              <li>MongoDB</li>
+          </ul>
+        </div>
+      </div>
  
-    <section class="contact" id="contact">
+    <div class="contact" id="contact">
         <div class='section-header'>
             <h2>Contact</h2>
-          </div>
+        </div>
+
+        <div class='social-media'>
+          <a class='btn' href="https://mywechat.surge.sh/" target="_blank">
+              <i class="fab fa-weixin"></i>
+          </a>
+          <a class='btn' href="https://www.linkedin.com/in/jeff-leung/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a class='btn' href="https://github.com/Fatpikachu" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class='btn' href="https://www.facebook.com/JefreyLeung/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+
         <div class="contact-container">
           <div class="contact-form">
             <form action="https://formspree.io/mqkyqqwr" method="POST">
               <div class='wrap'>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name">
+                <input type="text" id="name" name="name" autocomplete="off" placeholder='name' required>
+                <label for="name"><span class='content-name'>Name</span></label>
               </div>
               <div class='wrap'>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
+                <input type="email" id="email" name="_replyto" autocomplete="off" placeholder='email' required>
+                <label for="email"><span class='content-email'>Email</span></label>
               </div>
               <div class='wrap'>
-                  <label for="subject">Subject:</label>
-                  <input type="text" id="subject" name="subject" placeholder="Enter Subject">
+                  <input type="text" id="subject" name="subject" autocomplete="off" placeholder='subject' required>
+                  <label for="subject"><span class='content-subject'>Subject</span></label>
                 </div>
-              <div class='wrap'>
-                <label for="subject">Message:</label>
+              <div class='message-wrap'>
+                <!-- <label for="subject">Message:</label> -->
+                <div class='message'>Message:</div>
                 <textarea name="message" id="message" rows="5"></textarea>
               </div>
               <button type="submit" class="submit">Send</button>
             </form>
           </div>
         </div>
-    </section>
+      </div>
 
-    <footer class="copyright">
+    <footer class="footer">
+        <div class='email-phone'>
+            <div class='myemail'>Email: JefyLeung@gmail.com</div>
+            <div class='myphone'>Phone: 510-387-0833</div>
+        </div>
       <div class='copyright-container'>
             <a>&copy; 2020 JeffreyLeung.</a>
-            <a class='privacy-policy'href='https://www.privacypolicies.com/privacy/view/844b623acee015748cc7a0703be387f4'
+            <a class='privacy-policy'href='https://www.privacypolicies.com/privacy/view/80684530164bfcbc39225beca168f61a'
             target="_blank" name='Privacy Policy'>Privacy Policy</a>  
             <a>All rights reserved.</a>
           </div>
       </div>
     </footer>
+  </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/b732a240f1.js" crossorigin="anonymous"></script>
 </body>
 </html>

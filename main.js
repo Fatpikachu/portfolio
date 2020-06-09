@@ -48,10 +48,10 @@ $(document).on("scroll", function(){
     $(".header").removeClass("shrink");
   }
 
-  AOS.init({
-    easing: 'ease',
-    duration: 2000
-  })
+  // AOS.init({
+  //   easing: 'ease',
+  //   duration: 2000
+  // })
 });
 
 $(document).ready(function (){
@@ -64,7 +64,75 @@ $(document).ready(function (){
     var message = $('#message').val();
 
     //validation
-
-
   })
+})
+
+$(window).scroll(function(){
+  if ($(window).width() < 960) {
+    $('.ls').each(function(){
+      var height = $(window).height();
+  
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = $(window).scrollTop() + (height);
+      
+      var elemTop = $(this).offset().top;
+      var elemBottom = (elemTop + $(this).height())*(7/8);
+  
+      if(elemTop < docViewBottom){
+        $(this).addClass('inView');
+      } else if((elemTop > docViewBottom)) {
+        $(this).removeClass('inView');
+      }
+    })
+  
+    $('.rs').each(function(){
+      var height = $(window).height();
+  
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = $(window).scrollTop() + (height);
+      
+      var elemTop = $(this).offset().top;
+      var elemBottom = (elemTop + $(this).height())*(7/8);
+  
+      if(elemTop < docViewBottom){
+        $(this).addClass('inView');
+      } else if((elemTop > docViewBottom)) {
+        $(this).removeClass('inView');
+      }
+    })
+
+  } else {
+    $('.ls').each(function(){
+      var height = $(window).height();
+  
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = $(window).scrollTop() + (height);
+      
+      var elemTop = $(this).offset().top;
+      var elemBottom = elemTop + $(this).height();
+      console.log('elemetop: ', elemTop)
+      console.log('viewtop: ', docViewTop)
+      if(((elemTop > docViewTop) && (elemBottom < docViewBottom))){
+        $(this).addClass('inView');
+      } else if((elemTop > docViewBottom)) {
+        $(this).removeClass('inView');
+      }
+    })
+  
+    $('.rs').each(function(){
+      var height = $(window).height();
+  
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = $(window).scrollTop() + (height);
+      
+      var elemTop = $(this).offset().top;
+      var elemBottom = elemTop + $(this).height();
+  
+      if(((elemTop > docViewTop) && (elemBottom < docViewBottom))){
+        $(this).addClass('inView');
+      } else if((elemTop > docViewBottom)) {
+        $(this).removeClass('inView');
+      }
+    })
+  }
 })
