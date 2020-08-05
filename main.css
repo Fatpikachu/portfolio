@@ -988,6 +988,10 @@ footer {
     padding: 0 100px;
   }
 
+  .content .name{
+    font-size: 2.3em;
+  }
+
   #contact{
     grid-area: contact;
   }
