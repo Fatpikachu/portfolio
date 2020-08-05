@@ -123,3 +123,19 @@ $(window).scroll(function(){
     })
   }
 })
+
+$('.read-more').click(function(){
+  $(this).siblings('.name').css('display', 'none');
+  $(this).css('display', 'none');
+  $(this).siblings('.box-description').css('display', 'block');
+  $(this).siblings('img').removeClass('hoverable');
+  $(this).siblings('img').addClass('not-hoverable');
+})
+
+$('.box-description').click(function(){
+  $(this).siblings('.name').css('display', 'block');
+  $(this).css('display', 'none');
+  $(this).siblings('.read-more').css('display', 'block');
+  $(this).siblings('img').addClass('hoverable');
+  $(this).siblings('img').removeClass('not-hoverable');
+})
