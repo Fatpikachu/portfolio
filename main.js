@@ -25,34 +25,52 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-function onClickMenu(){
-	document.getElementById("menu").classList.toggle("change");
-	document.getElementById("nav").classList.toggle("change");
-	document.getElementById("menu-bg").classList.toggle("change-bg");
-}
+
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav");
+  const navLinks = document.querySelectorAll('.nav li');
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active')
+    navLinks.forEach((link, i) => {
+      if(link.style.animation){
+        link.style.animation = '';
+      } else {
+        link.style.animation = `navFade 0.8s ease forwards ${i / 7 + 0.5}s`;
+      }
+    })
+    burger.classList.toggle('toggle');
+  })
+
+$("#nav li").mouseenter(function(){
+  $(this).children("a").css({"font-size": "1.2em", "color": "black"})
+  $(this).children("i").css({"transform": "scale(1.3)", "color": "black"})
+})
+
+$("#nav li").mouseleave(function(){
+  $(this).children("a").css({"font-size": "18px", "color": "white"})
+  $(this).children("i").css({"transform": "", "color": "white"})
+})
 
 $(document).on("scroll", function(){
-  if
-    ($(document).scrollTop() > 100){
+  if($(document).scrollTop() > 100){
     $(".header").addClass("shrink");
-  }
-  else
-  {
+    $(".bar").addClass("bar-shrink");
+  }else{
     $(".header").removeClass("shrink");
+    $(".bar").removeClass("bar-shrink");
   }
 });
 
 $(document).ready(function (){
   $('.submit').click(function(event){
     // event.preventDefault()
-    console.log('this was clicked')
-
     var email = $('#email').val();
     var name = $('#name').val();
     var message = $('#message').val();
     //validation
   })
 })
+
 
 $(window).scroll(function(){
   if ($(window).width() < 960) {
@@ -97,8 +115,7 @@ $(window).scroll(function(){
       
       var elemTop = $(this).offset().top;
       var elemBottom = elemTop + $(this).height();
-      console.log('elemetop: ', elemTop)
-      console.log('viewtop: ', docViewTop)
+
       if(((elemTop > docViewTop) && (elemBottom < docViewBottom))){
         $(this).addClass('inView');
       } else if((elemTop > docViewBottom)) {
@@ -127,15 +144,78 @@ $(window).scroll(function(){
 $('.read-more').click(function(){
   $(this).siblings('.name').css('display', 'none');
   $(this).css('display', 'none');
-  $(this).siblings('.box-description').css('display', 'block');
+  $(this).siblings('.box-description').addClass('visible');
   $(this).siblings('img').removeClass('hoverable');
   $(this).siblings('img').addClass('not-hoverable');
 })
 
 $('.box-description').click(function(){
   $(this).siblings('.name').css('display', 'block');
-  $(this).css('display', 'none');
+  $(this).removeClass('visible');
   $(this).siblings('.read-more').css('display', 'block');
   $(this).siblings('img').addClass('hoverable');
   $(this).siblings('img').removeClass('not-hoverable');
 })
+
+
+var TxtType = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+  this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+  this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="typewrite-blinker">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 200 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+  setTimeout(function() {
+  that.tick();
+  }, delta);
+
+};
+
+window.onload = function() {
+  setTimeout(() => {
+    var elements = document.getElementsByClassName('typewrite');
+    console.log('the elementssss: ', elements)
+    // for (var i=0; i<elements.length; i++) {
+        let i = 0;
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        console.log('the toRotate:  ', toRotate)
+        new TxtType(elements[i], JSON.parse(toRotate), period);
+        
+        
+        // console.log('the i:   ', i)
+    // }
+  }, 2000)
+};
+
+const t1 = gsap.timeline({defaults: {ease: 'power1.out'}});
+t1.fromTo(".typewrite-blinker", {opacity: 1}, {opacity: 1, duration: 1}, '-=5')
+t1.fromTo(".typewrite", {opacity: 0}, {opacity: 1, duration: 5})

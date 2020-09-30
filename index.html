@@ -14,37 +14,38 @@
         href="https://fonts.googleapis.com/css?family=Dosis">
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Poppins">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" 
+        rel="stylesheet">
 </head>
 <body>
   <div class='app-container'>
         <div class="header" id='header'>
           <div class='left-corner'>
+            <img class='logo' src="./images/Logo.png" />
             <h1>Jeffrey Leung</h1>
-            <h6>Software Engineer</h6>
+            <h6>Front End Developer</h6>
           </div>
-          <div id="menu-container">
-            <div id="menu-bar">
-                <div id="menu" onclick="onClickMenu()">
-                  <div id="bar1" class="bar"></div>
-                  <div id="bar2" class="bar"></div>
-                  <div id="bar3" class="bar"></div>
-                </div>
-                <ul class="nav" id="nav">
-                  <li><a href="#about">Home</a></li>
-                  <li><a href="#portfolio">Projects</a></li>
-                  <li><a href="#full-apps">Apps</a></li>
-                  <li><a href="#hobbies">Hobbies</a></li>
-                  <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="menu-bg" id="menu-bg"></div>
+          <div class="burger">
+            <p id="bar-wrap">
+              <div id="bar1" class="bar"></div>
+              <div id="bar2" class="bar"></div>
+              <div id="bar3" class="bar"></div>
+            </p>
+            <ul class="nav" id="nav">
+              <li><i class="menu-icon fas fa-home"></i><a href="#">&nbsp;Home</a></li>
+              <li><i class="menu-icon far fa-window-restore"></i><a href="#portfolio">&nbsp;Projects</a></li>
+              <li><i class="menu-icon fas fa-layer-group"></i><a href="#full-apps">&nbsp;Apps</a></li>
+              <li><i class="menu-icon fas fa-hand-holding-heart"></i><a href="#hobbies">&nbsp;Hobbies</a></li>
+              <li><i class="menu-icon fas fa-phone-alt"></i><a href="#contact">&nbsp;Contact</a></li>
+            </ul>
           </div>
         </div>
-
-
     <div class="about" id="about">
       <div class="container">
-        <div class='hello-world'>Hello World</div>
+        <a class='landing-text'><span class='first-line'>Hi, welcome!</span><br/> My name is <span class='my-name'>Jeffrey</span>, <br/> an aspiring software developer and <br/>I'm </a>
+        <a href="" class="typewrite" data-period="1500" data-type='[ "autonomous.", "creative.", "energetic.", "passionate.", "organized.","honest.", "reliable.", "resilient.", "responsible." ]'>
+          <span class="typewrite-blinker"></span>
+        </a>
         <a href="./Jeffrey's Resume.pdf" class= "resume-download" download="Jeff's Resume"> Download Resume</a>
       </div>
     </div>
@@ -78,7 +79,7 @@
             <h1>TP/Egg Calculator</h1>
               <div class="portfolio-description">
                   <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Admist the current pandemic many necessities are scarce, and 
-                    keeping track of supplies can be bothersome. This helps calculate how long your supply will last
+                    keeping track of your essential supplies can be bothersome. This app helps calculate how long your toilet paper and eggs will last
                     taking various factors into account.
                   </p>
               </div>
@@ -155,10 +156,11 @@
         </div>
       </div>
 
-    <div className="full-apps" id="full-apps">
+    <div class="full-apps" id="full-apps">
         <div class='section-header'>
             <h2>Full Stack</h2>
         </div>
+    <div class="slideshow-background">
       <div class="slideshow-container">
         <div class="mySlides fade">
           <!-- <div class="numbertext">1 / 8</div> -->
@@ -241,6 +243,43 @@
           <span class="dot" onclick="currentSlide(7)"></span> 
           <span class="dot" onclick="currentSlide(8)"></span> 
         </div>
+      </div>
+
+        <section class="card-list">
+          <article class="card">
+            <p>Javascript</p>
+          </article>
+          <article class="card">
+            <p>ES6</p>
+          </article>
+          <article class="card">
+            <p>React<p>
+          </article>
+          <article class="card">
+            <p>Redux</p>
+          </article>
+          <article class="card">
+            <p>HTML/CSS</p>
+          </article>
+          <article class="card">
+            <p>jQuery</p>
+          </article>
+          <article class="card">
+            <p>MongoDb</p>
+          </article>
+          <article class="card">
+            <p>SQL/MySQL</p>
+          </article>
+          <article class="card">
+              <p>Socket.io</p>
+          </article>
+          <article class="card">
+              <p>Node.js</p>
+          </article>
+          <article class="card">
+            <p>Express</p>
+          </article>
+        </section>
 
         <div class='skills-container'>
           <ul class='skills'>
@@ -391,7 +430,8 @@
   </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="main.js"></script>
     <script src="https://kit.fontawesome.com/b732a240f1.js" crossorigin="anonymous"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
