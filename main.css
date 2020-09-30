@@ -696,6 +696,7 @@ img {vertical-align: middle;}
     display: flex;
     padding: 3rem;
     overflow-x: scroll;
+    justify-content: space-around;
   }
   
   .card{
