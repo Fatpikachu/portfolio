@@ -145,7 +145,7 @@ p{
   cursor: pointer;
 }
 
-.burger div{
+.bar {
   width: 35px;
   height: 5px;
   background-color: rgb(76, 126, 211);
@@ -271,7 +271,7 @@ p{
   font-family: 'Roboto Condensed';
 }
 
-.resume-download{
+/* .resume-download{
   display: block;
   width: max-content;
   font-size: 1.5em;
@@ -289,7 +289,7 @@ p{
   color: white;
   border: 1.5px solid var(--darkblue);
   transition: 0.3s ease;
-}
+} */
 
 /* section header */
 
@@ -614,6 +614,22 @@ img {vertical-align: middle;}
 
   .nav li a{
     font-size: 1em !important;
+  }
+
+  .left-corner h1{
+    font-size: 3em;
+  }
+
+  .shrink h1{
+    font-size: 2em;
+  }
+  .left-corner h6{
+    font-size: 1.8em;
+    margin-left: 2.7em;
+  }
+  .shrink h6{
+    font-size: 1em;
+    margin-left: 3.5em;
   }
 }
 

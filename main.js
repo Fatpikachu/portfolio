@@ -26,7 +26,7 @@ function showSlides(n) {
 }
 
 
-  const burger = document.querySelector(".burger");
+  const burger = document.querySelector("#bar-wrap");
   const nav = document.querySelector(".nav");
   const navLinks = document.querySelectorAll('.nav li');
   burger.addEventListener('click', () => {
@@ -42,12 +42,12 @@ function showSlides(n) {
   })
 
 $("#nav li").mouseenter(function(){
-  $(this).children("a").css({"font-size": "1.2em", "color": "black"})
-  $(this).children("i").css({"transform": "scale(1.3)", "color": "black"})
+  $(this).children("a").css({"font-size": "1.1em", "color": "black"})
+  $(this).children("i").css({"transform": "scale(1.1)", "color": "black"})
 })
 
 $("#nav li").mouseleave(function(){
-  $(this).children("a").css({"font-size": "18px", "color": "white"})
+  $(this).children("a").css({"font-size": "1em", "color": "white"})
   $(this).children("i").css({"transform": "", "color": "white"})
 })
 
