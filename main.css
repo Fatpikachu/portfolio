@@ -603,12 +603,12 @@ img {vertical-align: middle;}
   }
 
   body #header{
-    height: 26vh;
+
   }
 
   body .shrink {
     /* height: 30px; */
-    height: 26vh !important;
+    /* height: 26vh !important; */
   }
 
   body .nav {
@@ -637,14 +637,13 @@ img {vertical-align: middle;}
   body .left-corner h1{
     font-size: 3em;
     margin-left: .5em;
-    display: inline-block !important;
   }
 
   body .shrink h1{
     font-size: 2em;
-    display: inline-block !important;
+    display: none;
   }
-  
+
   body .left-corner h6{
     font-size: 1.8em;
   }
@@ -652,6 +651,7 @@ img {vertical-align: middle;}
   body .shrink h6{
     font-size: 1em;
     margin-left: 3.3em;
+    display: none;
   }
 }
 
