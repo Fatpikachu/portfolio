@@ -602,6 +602,15 @@ img {vertical-align: middle;}
     font-size: 11px
   }
 
+  #header{
+    height: 26vh;
+  }
+
+  .shrink {
+    /* height: 30px; */
+    height: 100%;
+  }
+
   .nav {
     width: 100vw;
     height: 100vh;
@@ -628,10 +637,12 @@ img {vertical-align: middle;}
   .left-corner h1{
     font-size: 3em;
     margin-left: .5em;
+    display: inline-block !important;
   }
 
   .shrink h1{
     font-size: 2em;
+    display: inline-block !important;
   }
   .left-corner h6{
     font-size: 1.8em;
