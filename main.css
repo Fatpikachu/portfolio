@@ -16,7 +16,7 @@
 
 html{
   font-size: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 html { 
@@ -228,14 +228,35 @@ p{
   justify-content: center;
   width: 100%;
   margin-top: 20vh;
+  padding-bottom: 15vh;
 }
 
 .about .container{
-  width: 400px;
-  /* text-align: center; */
-  /* background-color: white; */
-  /* padding: 10px 10px 0 10px;
-  border: 1px solid black; */
+  width: 600px;
+  position:relative;
+  padding: 5em 5em 0 8em;
+  background:
+  linear-gradient(to right, rgb(36, 63, 171) 3px, transparent 3px) 0 0,
+  linear-gradient(to right, rgb(36, 63, 171) 3px, transparent 3px) 0 100%,
+  linear-gradient(to left, rgb(36, 63, 171) 3px, transparent 3px) 100% 0,
+  linear-gradient(to left, rgb(36, 63, 171) 3px, transparent 3px) 100% 100%,
+  linear-gradient(to bottom, rgb(36, 63, 171) 3px, transparent 3px) 0 0,
+  linear-gradient(to bottom, rgb(36, 63, 171) 3px, transparent 3px) 100% 0,
+  linear-gradient(to top, rgb(36, 63, 171) 3px, transparent 3px) 0 100%,
+  linear-gradient(to top, rgb(36, 63, 171) 3px, transparent 3px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+.about .container:before {
+  /* content: '';
+  position: absolute;
+  top: -1px; 
+  left: -1px;
+  border: 1px solid white;
+  height: 100%;
+  width: 100%;
+  border-radius: 10%; */
 }
 
 .landing-text{
@@ -649,6 +670,10 @@ img {vertical-align: middle;}
     margin-left: 3.3em;
     display: none;
   }
+
+  .about .container{
+    width: 400px;
+  }
 }
 
 @media screen and (max-width: 1024px){
@@ -725,6 +750,7 @@ img {vertical-align: middle;}
   .skills-container{
     display: none;
   }
+
 
   .card-list{
     display: flex;
