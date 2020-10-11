@@ -25,8 +25,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-
-  const burger = document.querySelector("#bar-wrap");
+  const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav");
   const navLinks = document.querySelectorAll('.nav li');
   burger.addEventListener('click', () => {
