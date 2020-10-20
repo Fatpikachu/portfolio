@@ -66,11 +66,9 @@ $(document).on("scroll", function(){
 
 $(document).ready(function (){
   $('.submit').click(function(event){
-    // event.preventDefault()
     var email = $('#email').val();
     var name = $('#name').val();
     var message = $('#message').val();
-    //validation
   })
 })
 
@@ -223,27 +221,6 @@ const t1 = gsap.timeline({defaults: {ease: 'power1.out'}});
 t1.fromTo(".typewrite-blinker", {opacity: 1}, {opacity: 1, duration: 1}, '-=5')
 t1.fromTo(".typewrite", {opacity: 0}, {opacity: 1, duration: 5})
 
-
-// var checkbox = document.querySelector('input[name=theme]');
-// var light = document.getElementsByClassName('light');
-// var dark = document.getElementsByClassName('dark');
-// // var mode = document.querySelector('.mode');
-// checkbox.addEventListener('change', function() {
-//     if(this.checked) {
-//         trans()
-//         document.documentElement.setAttribute('data-theme', 'dark')
-//         $(".light").removeClass('show')
-//         $(".dark").addClass('show')
-//         // mode.classList.toggle('show');
-//     } else {
-//         trans()
-//         document.documentElement.setAttribute('data-theme', 'light')
-//         $(".light").addClass('show')
-//         $(".dark").removeClass('show')
-//         // mode.classList.toggle('show');
-//     }
-// })
-
 let trans = () => {
     document.documentElement.classList.add('transition');
     window.setTimeout(() => {
@@ -256,8 +233,10 @@ checkbox.addEventListener('change', function(){
   if(this.checked){
     trans();
     document.documentElement.setAttribute('data-theme', 'dark');
+    document.body.setAttribute('data-theme', 'dark');
   } else {
     trans();
     document.documentElement.setAttribute('data-theme', 'light');
+    document.body.setAttribute('data-theme', 'light');
   } 
 })
