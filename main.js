@@ -54,9 +54,13 @@ $(document).on("scroll", function(){
   if($(document).scrollTop() > 100){
     $(".header").addClass("shrink");
     $(".bar").addClass("bar-shrink");
+    $(".mode").addClass("mode-shrink");
+    $(".label").addClass("label-shrink");
   }else{
     $(".header").removeClass("shrink");
     $(".bar").removeClass("bar-shrink");
+    $(".mode").removeClass("mode-shrink");
+    $(".label").removeClass("label-shrink");
   }
 });
 
@@ -218,3 +222,42 @@ window.onload = function() {
 const t1 = gsap.timeline({defaults: {ease: 'power1.out'}});
 t1.fromTo(".typewrite-blinker", {opacity: 1}, {opacity: 1, duration: 1}, '-=5')
 t1.fromTo(".typewrite", {opacity: 0}, {opacity: 1, duration: 5})
+
+
+// var checkbox = document.querySelector('input[name=theme]');
+// var light = document.getElementsByClassName('light');
+// var dark = document.getElementsByClassName('dark');
+// // var mode = document.querySelector('.mode');
+// checkbox.addEventListener('change', function() {
+//     if(this.checked) {
+//         trans()
+//         document.documentElement.setAttribute('data-theme', 'dark')
+//         $(".light").removeClass('show')
+//         $(".dark").addClass('show')
+//         // mode.classList.toggle('show');
+//     } else {
+//         trans()
+//         document.documentElement.setAttribute('data-theme', 'light')
+//         $(".light").addClass('show')
+//         $(".dark").removeClass('show')
+//         // mode.classList.toggle('show');
+//     }
+// })
+
+let trans = () => {
+    document.documentElement.classList.add('transition');
+    window.setTimeout(() => {
+        document.documentElement.classList.remove('transition')
+    }, 1000)
+}
+
+const checkbox = document.getElementById('checkbox');
+checkbox.addEventListener('change', function(){
+  if(this.checked){
+    trans();
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    trans();
+    document.documentElement.setAttribute('data-theme', 'light');
+  } 
+})
