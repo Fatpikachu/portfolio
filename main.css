@@ -29,6 +29,7 @@
   --hoverpanel: rgba(247, 250, 255, 0.9);
   --underline: rgb(70, 69, 69);
   --skillsbg: rgba(228, 238, 255, 0.742);
+  --mutedbutton: rgb(103, 103, 103);
 }
 
 html{
@@ -47,25 +48,27 @@ html[data-theme='dark'] {
   --slideshowbg: rgba(87, 86, 86, 0.8);
   --whitepanel: rgb(228, 228, 228);
   --urlblue: rgb(8, 71, 181);
-  --boxshadow: rgb(48, 47, 47);
+  --boxshadow: rgb(26, 25, 25);
   --roundshadow: rgba(74, 72, 72, 0.8);
   --lighttext: rgb(172, 172, 172);
-  --hoverpanel: rgb(31, 30, 30);
+  --hoverpanel: rgb(38, 37, 37);
   --mutedblue: rgba(29, 115, 244, 0.7);
   --lightgray: rgb(77, 75, 75);
   --underline: black;
   --skillsbg: rgba(72, 72, 72, 0.9);
+  --mutedbutton: rgb(203, 203, 203);
 }
 
 html { 
   background: var(--bg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
+  /* -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -o-background-size: cover; */
+  /* background-size: cover; */
   background-color: rgba(255,255,255,0.3);
   background-blend-mode: lighten;
   scroll-behavior: smooth;
+  background-size: 200% 200% auto;
 }
 
 body{
@@ -494,7 +497,7 @@ h2:after {
 }
 
 .portfolio-description p{
-  font-size: 1.7em;
+  font-size: 1.75em;
 }
 
 .portfolio-item.rs .portfolio-description{
@@ -523,7 +526,7 @@ h2:after {
 
 .github{
   background-color: var(--lightgray) !important;
-  color: var(--lighttext) !important;
+  color: var(--mutedbutton) !important;
 }
 
 .github:hover{
@@ -533,7 +536,7 @@ h2:after {
 
 .demo{
   background-color: var(--mutedblue);
-  color: var(--lighttext);
+  color: var(--mutedbutton);
 }
 
 .demo:hover{
@@ -542,7 +545,7 @@ h2:after {
 }
 
 .demo::first-letter {
-  font-size: .8em;
+  font-size: 1em;
 }
 
 /* slider */
