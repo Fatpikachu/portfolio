@@ -658,7 +658,7 @@ img {vertical-align: middle;}
     width: 100%;
     height: 100%;
     z-index: -10;
-    background: var(--bg) no-repeat center center;
+    background: url('images/background6/invertedbg6.jpg') no-repeat center center;
     background-blend-mode: lighten;
     scroll-behavior: smooth;
     -webkit-background-size: stretch;
