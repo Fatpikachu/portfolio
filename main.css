@@ -60,7 +60,7 @@ html[data-theme='dark'] {
 
 html { 
   background: var(--bg) no-repeat center fixed; 
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(36, 36, 36, 0.3);
   background-blend-mode: lighten;
   scroll-behavior: smooth;
   background-size: stretch auto;
@@ -645,8 +645,8 @@ img {vertical-align: middle;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 768px) {
 
-  body[data-theme='dark'] {
-    --bg: url('images/background6/invertedbg6.jpg');
+  html[data-theme='dark'] {
+    --bg: url('images/background6/invertedbg6.jpg') !important;
   }
 
   body:before {
