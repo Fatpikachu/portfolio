@@ -50,7 +50,7 @@ html[data-theme='dark'] {
   --boxshadow: rgb(48, 47, 47);
   --roundshadow: rgba(74, 72, 72, 0.8);
   --lighttext: rgb(172, 172, 172);
-  --hoverpanel: rgb(48, 47, 47);
+  --hoverpanel: rgb(31, 30, 30);
   --mutedblue: rgba(29, 115, 244, 0.7);
   --lightgray: rgb(77, 75, 75);
   --underline: black;
@@ -998,7 +998,7 @@ img {vertical-align: middle;}
   width: 100%;
   height: 50px;
   outline: none;
-  color: var(--darktext);
+  color: black;
   padding-top: 20px;
   border: none;
   display: block;
