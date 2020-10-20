@@ -650,6 +650,13 @@ img {vertical-align: middle;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 768px) {
 
+  html {
+    -webkit-background-size: stretch !important;
+    -moz-background-size: stretch !important;
+    -o-background-size: stretch !important;
+    background-size: stretch !important;
+  }
+
   .prev, .next,.text {
     font-size: 11px
   }
