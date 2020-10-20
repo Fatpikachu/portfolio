@@ -647,11 +647,7 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 768px) {
 
   html {
-    background: var(--bg) no-repeat center fixed !important;
-    -webkit-background-size: stretch !important;
-    -moz-background-size: stretch !important;
-    -o-background-size: stretch !important;
-    background-size: stretch !important;
+    background-size: 100% !important;
   }
 
   .prev, .next,.text {
