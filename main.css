@@ -783,7 +783,7 @@ img {vertical-align: middle;}
   .card-list{
     display: flex;
     padding: 3rem;
-    overflow-x: scroll;
+    overflow-x: hidden;
     justify-content: space-around;
   }
   
