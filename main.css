@@ -39,7 +39,6 @@ html{
 
 html[data-theme='dark'] {
   --bg: url('images/background6/invertedbg6.jpg');
-  background-color: rgba(255, 255, 255, 0.036);
   --darktext: rgb(247, 247, 247);
   --black: white;
   --red: rgb(194, 65, 65); 
@@ -650,10 +649,10 @@ img {vertical-align: middle;}
     content: "";
     display: block;
     position: fixed;
-    left: 0;
+    /* left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; */
     z-index: -10;
     background: var(--bg) no-repeat center center;
     background-blend-mode: lighten;
