@@ -30,6 +30,7 @@
   --underline: rgb(70, 69, 69);
   --skillsbg: rgba(228, 238, 255, 0.742);
   --mutedbutton: rgb(103, 103, 103);
+  --boxdescription: rgb(240, 240, 240);
 }
 
 html{
@@ -56,6 +57,7 @@ html[data-theme='dark'] {
   --underline: black;
   --skillsbg: rgba(72, 72, 72, 0.9);
   --mutedbutton: rgb(203, 203, 203);
+  --boxdescription: rgb(53, 53, 53);
 }
 
 /* html { 
@@ -98,6 +100,7 @@ body{
 
 
 .left-corner{
+  position: relative;
   margin-left: 2em;
 }
 
@@ -107,7 +110,6 @@ body{
   float: left;
   margin-top: 1.5em;
 }
-
 
 a{
   text-decoration: none;
@@ -122,6 +124,7 @@ p{
 .portfolio-img{
   justify-content: center;
 }
+
 .portfolio img {
   display: block;
   height: 14em;
@@ -141,24 +144,33 @@ p{
   z-index: 10;
   position: fixed;
   top: 0;
-  border-bottom: 2px solid var(--lightblue);
+  /* border-bottom: 1px solid var(--lightblue); */
   display: flex;
   font-family: 'Roboto Condensed';
   justify-content: space-between;
 }
 
-.header h1{
-  font-size: 4em;
+.fa-user-tie{
+  display: inline-block;
+  font-size: 5em;
   transition: 1s ease;
-  margin: 0.4em 0 0 0.2em;
+  position: absolute;
+  top: 20px;
+  color: var(--darktext);
+}
+
+.header h1{
+  font-size: 3em;
+  transition: 1s ease;
+  margin: 20px 0 0 50px;
   color: var(--darktext);
   display: inline-block !important;
 }
 
 .header h6{
-  font-size: 2em;
+  font-size: 1.5em;
   transition: 1s ease;
-  margin-left: 2.5em;
+  margin-left: 55px;
   color: var(--darktext);
 }
 
@@ -173,24 +185,24 @@ p{
 }
 
 .shrink h1{
-  font-size: 2.5em;
+  font-size: 2em;
   transition: 1s ease;
   color: var(--white);
-  margin: 0.5em 0 0 0.5em;
+  margin: 18px 0 0 35px;
   display: inline-block !important;
 }
 
 .shrink h6{
-  font-size: 1.2em;
+  font-size: 1.1em;
   transition: 1s ease;
   color: var(--white);
-  margin-left: 3.2em;
+  margin-left: 3.3em;
 }
 
-.shrink .logo{
-  width: 2.5em;
+.shrink .fa-user-tie{
+  font-size: 3.2em;
   transition: 1s ease;
-  content: url("./images/logo-white.png");
+  color: white;
 }
 
 /* menu */
@@ -321,7 +333,7 @@ p{
 }
 
 .my-name{
-  font-size: 35px;
+  font-size: 25px;
   color: var(--black);
   font-weight: bold;
 }
@@ -673,9 +685,6 @@ img {vertical-align: middle;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 768px) {
 
-
-
-
   .prev, .next,.text {
     font-size: 11px
   }
@@ -744,60 +753,27 @@ img {vertical-align: middle;}
   }
 
   /* hobbies */
-  body .content img{
+  body .content .fas{
     position: absolute;
     margin: 0;
-    width: 70%;
     transition: 0.8s;
-    top: 75px;
+    font-size: 12em;
+    top: 65px;
   }
 
-  body .content.food .not-hoverable{
-    width: 40%;
-    transform: translateY(-30px);
-    transition: 1.5s ease;
+  body .content .not-hoverable {
+    transform: translateY(-35px);
+    transition: 0.8s ease;
+    font-size: 8em;
   } 
-
-  body .content .not-hoverable{
-    width: 50%;
-    transform: translateY(-40px);
-    transition: 1.5s ease;
-  }
-
-  body .content.sports .not-hoverable{
-    width: 40%;
-    transform: translateY(-55px);
-    transition: 1.5s ease;
-  } 
-
-  body .content.anime .not-hoverable{
-    width: 55%;
-    transform: translateY(-45px);
-    transition: 1.5s ease;
-  } 
-  
-  body .content.food img {
-    width: 55%;
-    top: 50px;
-  }
-  
-  body .content.sports img {
-    width: 50%;
-  }
-
-  body .content.anime img {
-    width: 75%;
-    top: 100px;
-  }
 
   body .read-more{
     color: var(--lightblue);
   }
 
   body .box-description.visible{
-    transition-delay: 0.8s;
+    transition-delay: 0.3s;
   }
-
 }
 
 /* skills */
@@ -833,7 +809,7 @@ img {vertical-align: middle;}
   }
 
   .card p{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
   }
   
@@ -925,21 +901,29 @@ img {vertical-align: middle;}
 }
 
 
-.content img{
-  position: absolute;
+.content .fas{
+  /* position: absolute;
   margin: 0;
   width: 40%;
   transition: 0.8s;
-  top: 50px;
+  top: 50px; */
+  font-size: 8em;
 }
 
-.content.food img {
-  /* top: 100px; */
-  width: 30%;
+.content.home-construction .fas {
+  color: rgb(80, 80, 198);
 }
 
-.content.sports img {
-  width: 35%;
+.content.food .fas {
+  color: rgb(215, 61, 61);
+}
+
+.content.sports .fas {
+  color: rgba(127, 44, 169, 0.817);
+}
+
+.content.anime .fas {
+  color: rgb(233, 139, 57);
 }
 
 .read-more{
@@ -966,13 +950,16 @@ img {vertical-align: middle;}
 .box-description{
   visibility: hidden;
   font-size: 16px;
-  background-color: var(--purewhite);
-  padding: 8px;
+  height: 170px;
+  background-color: var(--boxdescription);
+  color: var(--darktext);
+  padding: 15px;
   border-radius: 5px;
   position: relative;
   align-items: space-between;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
+  top: 35px;
 }
 
 .box-description.visible{
@@ -1189,7 +1176,7 @@ footer {
 }
 
 .btn:hover::before{
-  animation: glide 0.7s 1;
+  animation: glide 0.3s 1;
   top: -10%;
   left: -10%;
 }
@@ -1197,11 +1184,7 @@ footer {
 @keyframes glide{
   0%{
     left: -110%;
-    top: 90%;
-  }
-  50%{
-    left: 10%;
-    top: -30%;
+    top: 100%;
   }
   100%{
     left: -10%;
@@ -1307,73 +1290,34 @@ footer {
 }
 
 @media all and (min-width: 1024px) {
-  .content img{
+  .content .fas{
     position: absolute;
     margin: 0;
-    width: 50%;
     transition: 0.8s;
-    top: 110px;
+    top: 100px;
   }
 
   .content .not-hoverable{
     position: absolute;
     transition: none;
     margin: 0;
-    width: 50%;
-    top: 30px;
-  }
-
-  .content.food .not-hoverable{
-    top: 30px;
-    transition: none;
-  }
-
-  .content.food img {
-    top: 90px;
-    width: 40%;
-  }
-
-  .content.anime img {
-    width: 60%;
-  }
-
-  .content.sports img {
-    top: 90px;
-    width: 40%;
-  }
-
-  .content.sports .not-hoverable{
-    top: 20px;
-    transition: none;
-  }
-
-  .box:hover .content.sports .hoverable{
-    top: 20px;
+    top: 40px;
   }
 
   .box .content .name{
     z-index: 2;
   }
 
-  /* .content .read-more{
-    position: relative;
-    font-size: 1.5em;
-    width: 100%;
-    color: rgb(99, 99, 247);
-    transition: 0.8s;
-    font-weight: bold;
-    padding-top: 10px;
-    left: 0px;
-  } */
-
   .box:hover .content .hoverable{
-    top: 30px;
+    top: 40px;
   }
 
   .read-more:hover{
     text-decoration: underline;
   }
 }
+
+
 
 html {
  transition: all 750ms !important;

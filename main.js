@@ -146,16 +146,16 @@ $('.read-more').click(function(){
   $(this).siblings('.name').css('display', 'none');
   $(this).css('display', 'none');
   $(this).siblings('.box-description').addClass('visible');
-  $(this).siblings('img').removeClass('hoverable');
-  $(this).siblings('img').addClass('not-hoverable');
+  $(this).siblings('.fas').removeClass('hoverable');
+  $(this).siblings('.fas').addClass('not-hoverable');
 })
 
 $('.box-description').click(function(){
   $(this).siblings('.name').css('display', 'block');
   $(this).removeClass('visible');
   $(this).siblings('.read-more').css('display', 'block');
-  $(this).siblings('img').addClass('hoverable');
-  $(this).siblings('img').removeClass('not-hoverable');
+  $(this).siblings('.fas').addClass('hoverable');
+  $(this).siblings('.fas').removeClass('not-hoverable');
 })
 
 
