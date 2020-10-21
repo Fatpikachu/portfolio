@@ -152,10 +152,10 @@ p{
 
 .fa-user-tie{
   display: inline-block;
-  font-size: 4.9em;
+  font-size: 4.6em;
   transition: 1s ease;
   position: absolute;
-  top: 22px;
+  top: 25px;
   color: var(--darktext);
 }
 
@@ -170,7 +170,7 @@ p{
 .header h6{
   font-size: 1.5em;
   transition: 1s ease;
-  margin-left: 55px;
+  margin-left: 52px;
   color: var(--darktext);
 }
 
@@ -711,6 +711,7 @@ img {vertical-align: middle;}
   .nav li a{
     font-size: 1em !important;
   }
+
 
   .about .container{
     width: 400px;
