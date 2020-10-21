@@ -108,7 +108,7 @@ body{
   width: 4em;
   transition: 1s ease;
   float: left;
-  margin-top: 1.5em;
+  margin-top: 3em;
 }
 
 a{
@@ -152,10 +152,10 @@ p{
 
 .fa-user-tie{
   display: inline-block;
-  font-size: 5em;
+  font-size: 4.9em;
   transition: 1s ease;
   position: absolute;
-  top: 20px;
+  top: 22px;
   color: var(--darktext);
 }
 
@@ -700,41 +700,16 @@ img {vertical-align: middle;}
     top: 18px;
   }
 
+  body .mode-shrink{
+    top: 23px;
+  }
+
   .nav li{
     font-size: 3.5em !important;
   }
 
   .nav li a{
     font-size: 1em !important;
-  }
-
-  body .logo {
-    width: 3em;
-    margin-top: 1.5em;
-  }
-
-  body .shrink .logo{
-    width: 2.2em;
-  }
-
-  body .left-corner h1{
-    font-size: 3em;
-    margin-left: .5em;
-  }
-
-  body .shrink h1{
-    font-size: 2em;
-    display: none;
-  }
-
-  body .left-corner h6{
-    font-size: 1.8em;
-  }
-
-  body .shrink h6{
-    font-size: 1em;
-    margin-left: 3.3em;
-    display: none;
   }
 
   .about .container{
@@ -902,11 +877,6 @@ img {vertical-align: middle;}
 
 
 .content .fas{
-  /* position: absolute;
-  margin: 0;
-  width: 40%;
-  transition: 0.8s;
-  top: 50px; */
   font-size: 8em;
 }
 
@@ -1212,10 +1182,6 @@ footer {
     grid-area: header;
   }
 
-  .shrink h1{
-    margin: 0.5em 0 0 0.5em;
-  }
-
   #about{
     grid-area: about;
   }
@@ -1326,8 +1292,8 @@ html {
 
 .mode{
   position: fixed;
-  top: 2.5em;
-  right: 30em;
+  top: 3em;
+  right: 22em;
 }
 
 .label{
