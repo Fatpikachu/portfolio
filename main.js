@@ -229,6 +229,7 @@ let trans = () => {
 }
 
 const checkbox = document.getElementById('checkbox');
+const logo = document.querySelector(".volpone-container");
 checkbox.addEventListener('change', function(){
   if(this.checked){
     trans();
@@ -238,5 +239,6 @@ checkbox.addEventListener('change', function(){
     trans();
     document.documentElement.setAttribute('data-theme', 'light');
     document.body.setAttribute('data-theme', 'light');
-  } 
+  }
+  logo.classList.toggle('dark')
 })

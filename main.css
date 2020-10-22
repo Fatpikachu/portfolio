@@ -1344,3 +1344,63 @@ html {
 .checkbox:checked + .label .ball{
   transform: translate(24px);
 }
+
+.volpone-container{
+  display: block;
+  position: fixed;
+  bottom: 30px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  left: 45px;
+  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
+  background-image: url("images/volponelight.png");
+  background-size: cover;
+}
+
+.volpone-container.dark{
+  background-image: url("images/volponedark.png");
+  box-shadow: 0px 0px 8px 5px rgba(19, 19, 19, 0.8);
+  filter: contrast(90%);
+}
+
+.volpone-container::before,
+.volpone-container::after{
+  --scale: 0;
+  --arrow-size: 11px;
+  --tip-color: rgb(113, 113, 113);
+  position: absolute;
+  content: '';
+  top: -1.25rem;
+  left: 50%;
+  transform: translateX(-0%) translateY(var(--translate-y, 0)) scale(var(--scale));
+  transition: 200ms transform;
+  transform-origin: bottom left;
+}
+
+.volpone-container::before{
+  --translate-y: calc(-100% - var(--arrow-size) + 2px);
+  content: attr(data-tooltip);
+  padding: 1.2rem;
+  color: white;
+  width: 120px;
+  background: var(--tip-color);
+  font-size: 16px;
+  border-radius: 0.3rem;
+  text-align: center;
+}
+
+.volpone-container:hover::before,
+  .volpone-container:hover::after{
+  --scale: 1;
+}
+
+.volpone-container::after{
+  content: '';
+  /* background-color: transparent; */
+  border: var(--arrow-size) solid transparent;
+  border-left-color: var(--tip-color);
+  border-top-color: var(--tip-color);
+  --translate-y: calc(-1 * var(--arrow-size));
+  transform-origin: top left;
+}
