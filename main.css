@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* overflow-x: hidden; */
 }
 
 :root{
@@ -37,6 +38,7 @@
 html{
   font-size: 10px;
   font-family: 'Ubuntu', sans-serif;
+  overflow-x: hidden;
 }
 
 html[data-theme='dark'] {
