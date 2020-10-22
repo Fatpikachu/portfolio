@@ -31,6 +31,7 @@
   --skillsbg: rgba(228, 238, 255, 0.742);
   --mutedbutton: rgb(103, 103, 103);
   --boxdescription: rgb(240, 240, 240);
+  --tip-color: rgb(76, 126, 254);
 }
 
 html{
@@ -58,6 +59,7 @@ html[data-theme='dark'] {
   --skillsbg: rgba(72, 72, 72, 0.9);
   --mutedbutton: rgb(203, 203, 203);
   --boxdescription: rgb(53, 53, 53);
+  --tip-color: rgb(58, 57, 57);
 }
 
 /* html { 
@@ -1360,15 +1362,14 @@ html {
 
 .volpone-container.dark{
   background-image: url("images/volponedark.png");
-  box-shadow: 0px 0px 8px 5px rgba(19, 19, 19, 0.8);
-  filter: contrast(90%);
+  box-shadow: 0px 0px 8px 5px rgba(34, 34, 34, 0.8);
+  filter: contrast(100%);
 }
 
 .volpone-container::before,
 .volpone-container::after{
   --scale: 0;
   --arrow-size: 11px;
-  --tip-color: rgb(113, 113, 113);
   position: absolute;
   content: '';
   top: -1.25rem;
@@ -1380,14 +1381,15 @@ html {
 
 .volpone-container::before{
   --translate-y: calc(-100% - var(--arrow-size) + 2px);
-  content: attr(data-tooltip);
+  content: "Need more storage in your home? \A Check out this Amazon store!";
   padding: 1.2rem;
   color: white;
-  width: 120px;
+  width: 150px;
   background: var(--tip-color);
   font-size: 16px;
   border-radius: 0.3rem;
   text-align: center;
+  white-space: pre-wrap;
 }
 
 .volpone-container:hover::before,
