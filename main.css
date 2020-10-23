@@ -40,7 +40,7 @@
 html{
   font-size: 10px;
   font-family: 'Ubuntu', sans-serif;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 html[data-theme='dark'] {
