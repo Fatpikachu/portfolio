@@ -203,16 +203,11 @@ TxtType.prototype.tick = function() {
 window.onload = function() {
   setTimeout(() => {
     var elements = document.getElementsByClassName('typewrite');
-    console.log('the elementssss: ', elements)
     // for (var i=0; i<elements.length; i++) {
         let i = 0;
         var toRotate = elements[i].getAttribute('data-type');
         var period = elements[i].getAttribute('data-period');
-        console.log('the toRotate:  ', toRotate)
         new TxtType(elements[i], JSON.parse(toRotate), period);
-        
-        
-        // console.log('the i:   ', i)
     // }
   }, 2000)
 };
@@ -241,4 +236,14 @@ checkbox.addEventListener('change', function(){
     document.body.setAttribute('data-theme', 'light');
   }
   logo.classList.toggle('dark')
+})
+
+const popup = document.querySelector(".popup");
+$(".volpone-small").click(function(){
+  let scale = popup.style.getPropertyValue('--scale');
+  if(scale === '1'){
+    popup.style.setProperty('--scale', 0)
+  } else {
+    popup.style.setProperty('--scale', 1)
+  }
 })

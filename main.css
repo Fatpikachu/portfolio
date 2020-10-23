@@ -33,12 +33,14 @@
   --mutedbutton: rgb(103, 103, 103);
   --boxdescription: rgb(240, 240, 240);
   --tip-color: rgb(76, 126, 254);
+  --ad-line-one: white;
+  --ad-line-two: rgb(23, 23, 23);
 }
 
 html{
   font-size: 10px;
   font-family: 'Ubuntu', sans-serif;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 html[data-theme='dark'] {
@@ -61,16 +63,10 @@ html[data-theme='dark'] {
   --skillsbg: rgba(72, 72, 72, 0.9);
   --mutedbutton: rgb(203, 203, 203);
   --boxdescription: rgb(53, 53, 53);
-  --tip-color: rgb(58, 57, 57);
+  --tip-color: rgb(116, 115, 115);
+  --ad-line-one: rgb(31, 42, 92);
+  --ad-line-two: white;
 }
-
-/* html { 
-  background: var(--bg) no-repeat center fixed; 
-  background-color: rgba(36, 36, 36, 0.3);
-  background-blend-mode: lighten;
-  scroll-behavior: smooth;
-  background-size: stretch auto;
-} */
 
 body[data-theme='dark']:before {
   background: url('images/background6/invertedbg6.jpg') no-repeat center center;
@@ -213,8 +209,6 @@ p{
 /* menu */
 
 .nav{
-  /* display: none; */
-  /* width: 5em; */
   text-transform: uppercase;
   position: relative;
   z-index: 8;
@@ -725,9 +719,11 @@ img {vertical-align: middle;}
   body .mode{
     right: 10em;
   }
+
+  
 }
 
-@media screen and (max-width: 1024px){
+@media all and (max-width: 1023px){
 
   .card-list{
     display: none;
@@ -755,16 +751,79 @@ img {vertical-align: middle;}
   body .box-description.visible{
     transition-delay: 0.3s;
   }
+
+  .popup, .popup::after{
+    --scale: 0;
+    transform: translateX(20%) translateY(-80%) scale(var(--scale));
+    transition: 200ms transform;
+    transform-origin: bottom left;
+  }
+  .popup {
+    position: fixed;
+    bottom: 30px;
+    left: 45px;
+    padding: 1.2rem;
+    color: var(--ad-line-one);
+    width: 150px;
+    height: auto;
+    background: var(--tip-color);
+    font-size: 18px;
+    border-radius: 0.3rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .to-amazon-popup{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -1px;
+    left: -1px;
+  }
+
+  .volpone-small{
+    display: block;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+  }
+  
+  .popup::after{
+    content: '';
+    border: 13px solid transparent;
+    border-left-color: var(--tip-color);
+    border-top-color: var(--tip-color);
+    transform-origin: top left;
+    left: -5px;
+    bottom: -40px;
+    position: absolute;
+  }
+  
+  .ad-line-two{
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    color: var(--ad-line-two);
+    padding-top: 5px;
+  }
+
+  .ad-line-two-mobile{
+    display: block;
+    font-size: 13px;
+    color: white;
+    padding-top: 5px;
+  }
+
 }
 
 /* skills */
 
-@media screen and (min-width: 1024px){
+@media all and (min-width: 1023px){
 
   .skills-container{
     display: none;
   }
-
 
   .card-list{
     display: flex;
@@ -794,21 +853,6 @@ img {vertical-align: middle;}
     font-weight: bold;
   }
   
-  /* .card-list::-webkit-scrollbar{
-    width: 10px;
-    height: 10px;
-  }
-  
-  .card-list::-webkit-scrollbar-thumb{
-    background: #3d3c3f;
-    border-radius: 10px;
-    box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.15);
-  }
-  
-  .card-list::-webkit-scrollbar-track{
-    background: linear-gradient(90deg, #c9c9cb, #c9c9cb, 1px, #aeaeb0 0, #aeaeb0);
-  } */
-  
   
   .card:hover{
     transform: translateY(-1rem);
@@ -820,6 +864,69 @@ img {vertical-align: middle;}
   
   .card:not(:first-child) {
     margin-left: -130px;
+  }
+
+  .popup, .popup::after{
+    --scale: 0;
+    transform: translateX(20%) translateY(-80%) scale(var(--scale));
+    transition: 200ms transform;
+    transform-origin: bottom left;
+  }
+  .popup {
+    position: fixed;
+    bottom: 30px;
+    left: 45px;
+    padding: 1.2rem;
+    color: var(--ad-line-one);
+    width: 150px;
+    height: auto;
+    background: var(--tip-color);
+    font-size: 18px;
+    border-radius: 0.3rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .volpone-container:hover + .popup{
+    --scale: 1 !important;
+  }
+  
+  .volpone-container:hover + .popup::after{
+    --scale: 1 !important;
+  }
+
+  .to-amazon{
+    display: block !important;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+  }
+
+  .volpone-small{
+    display: none;
+  }
+  
+  .popup::after{
+    content: '';
+    border: 13px solid transparent;
+    border-left-color: var(--tip-color);
+    border-top-color: var(--tip-color);
+    transform-origin: top left;
+    left: -5px;
+    bottom: -40px;
+    position: absolute;
+  }
+  
+  .ad-line-two{
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    color: var(--ad-line-two);
+    padding-top: 5px;
+  }
+
+  .ad-line-two-mobile{
+    display: none;
   }
 }
 
@@ -1169,7 +1276,7 @@ footer {
 }
 
 
-@media (max-width: 1024px) {
+@media all and (max-width: 1023px) {
   .app-container{
     display: grid;
     grid-template-columns: 1fr;
@@ -1261,7 +1368,7 @@ footer {
   }
 }
 
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1023px) {
   .content .fas{
     position: absolute;
     margin: 0;
@@ -1364,47 +1471,9 @@ html {
 
 .volpone-container.dark{
   background-image: url("images/volponedark.png");
-  box-shadow: 0px 0px 8px 5px rgba(34, 34, 34, 0.8);
-  filter: contrast(100%);
+  box-shadow: 0px 0px 8px 5px rgb(23, 23, 23);
 }
 
-.volpone-container::before,
-.volpone-container::after{
-  --scale: 0;
-  --arrow-size: 11px;
-  position: absolute;
-  content: '';
-  top: -1.25rem;
-  left: 50%;
-  transform: translateX(-0%) translateY(var(--translate-y, 0)) scale(var(--scale));
-  transition: 200ms transform;
-  transform-origin: bottom left;
-}
-
-.volpone-container::before{
-  --translate-y: calc(-100% - var(--arrow-size) + 2px);
-  content: "Need more storage in your home? \A Check out this Amazon store!";
-  padding: 1.2rem;
-  color: white;
-  width: 150px;
-  background: var(--tip-color);
-  font-size: 16px;
-  border-radius: 0.3rem;
-  text-align: center;
-  white-space: pre-wrap;
-}
-
-.volpone-container:hover::before,
-  .volpone-container:hover::after{
-  --scale: 1;
-}
-
-.volpone-container::after{
-  content: '';
-  /* background-color: transparent; */
-  border: var(--arrow-size) solid transparent;
-  border-left-color: var(--tip-color);
-  border-top-color: var(--tip-color);
-  --translate-y: calc(-1 * var(--arrow-size));
-  transform-origin: top left;
+.to-amazon{
+  display: none;
 }
