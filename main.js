@@ -41,8 +41,8 @@ function showSlides(n) {
   })
 
 $("#nav li").mouseenter(function(){
-  $(this).children("a").css({"font-size": "1.1em", "color": "black"})
-  $(this).children("i").css({"transform": "scale(1.1)", "color": "black"})
+  $(this).children("a").css({"font-size": "1.1em", "color": "#373737"})
+  $(this).children("i").css({"transform": "scale(1.1)", "color": "#373737"})
 })
 
 $("#nav li").mouseleave(function(){
